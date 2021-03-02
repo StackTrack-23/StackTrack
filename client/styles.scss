@@ -1,6 +1,64 @@
-html {
-    background: rgb(198, 223, 243);
-    div {
-      color: red;
+
+
+
+
+// .rows-container{
+
+//   width: 50%;
+//   border: 3px solid green;
+//   padding: 10px;
+
+
+  .row-container {
+    
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    min-width: 80%;
+
+
+
+    .elements {
+      font-size: clamp(12px, 1.3vw, 20px);
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 12.5%;
+      max-width: 12.5%;
+      flex-direction: column;
     }
-}
+
+  }
+
+  .notes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px;
+    min-width: 80%;
+    background-color: rgb(206, 206, 206);
+  }
+
+  
+// }
+
+
+
+
+  // div {
+  //   font-size: 1.3vw;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   div {
+  //      font-size: 15px;
+  //   }
+  // }
+  
+  
+  // @media screen and (max-width: 800px) {
+  //   div {
+  //      font-size: 15px;
+  //   }
+  // }
+  
