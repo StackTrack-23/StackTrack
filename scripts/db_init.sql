@@ -15,12 +15,11 @@ SET search_path = public;
 
 CREATE TABLE users (
   _id varchar PRIMARY KEY,
-  email VARCHAR UNIQUE NOT NULL,
+  email VARCHAR UNIQUE NOT NULL
 );
 
 CREATE TABLE posts (
   post_id SERIAL PRIMARY KEY,
-  user_id INTEGER NOT NULL,
   company VARCHAR NOT NULL,
   position VARCHAR NOT NULL,
   date_apply DATE NOT NULL,
@@ -30,5 +29,6 @@ CREATE TABLE posts (
   reference VARCHAR,
   link VARCHAR, 
   notes TEXT,
-  CONSTRAINT post_fk0 FOREIGN KEY (user_id) REFERENCES users (_id)
+  user_id VARCHAR NOT NULL,
+  CONSTRAINT post_fk0 FOREIGN KEY (user_id) REFERENCES users (_id) ON DELETE CASCADE
 );
