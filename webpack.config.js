@@ -47,6 +47,11 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     proxy: {
       '/': 'http://localhost:3000',
+      '/auth': {
+        target: 'http://localhost:3000',
+        secure: false,
+        changeorigin: true,
+      },
     },
     watchOptions: {
       poll: 1000,
