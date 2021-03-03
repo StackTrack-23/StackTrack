@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS posts;
+
 -- Boiler plate SQL db setup
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -11,14 +14,12 @@ SET default_with_oids = false;
 SET search_path = public;
 
 CREATE TABLE users (
-  _id serial NOT NULL,
-  email VARCHAR NOT NULL,
-  session_token VARCHAR NOT NULL,
-  CONSTRAINT users_pk PRIMARY KEY (_id)
+  _id varchar PRIMARY KEY,
+  email VARCHAR UNIQUE NOT NULL,
 );
 
 CREATE TABLE posts (
-  _id serial NOT NULL,
+  post_id SERIAL PRIMARY KEY,
   user_id INTEGER NOT NULL,
   company VARCHAR NOT NULL,
   position VARCHAR NOT NULL,
@@ -30,14 +31,4 @@ CREATE TABLE posts (
   link VARCHAR, 
   notes TEXT,
   CONSTRAINT post_fk0 FOREIGN KEY (user_id) REFERENCES users (_id)
-)
-
-CREATE TABLE GoogleOauthToken (
-  access_token text,
-  access_token_expires_in INTEGER,
-  acesss_token_issued_at DATE,
-  code text,
-  refresh_token text,
-  access_token_expires_at DATE,
-  CONSTRAINT GoogleOauthToken_fk0 FOREIGN KEY (access_token) REFERENCES users (session_token) 
-)
+);
