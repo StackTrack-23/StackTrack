@@ -46,16 +46,26 @@ body{
       // font-size: clamp(12px, 1.3vw, 20px);
       // display: flex;
       // flex-wrap: wrap;
-      min-width: 11.5%;
+      // min-width: 11.5%;
       // max-width: 11.5%;
     }
 
     .elements {
+      font-size: clamp(12px, 1.3vw, 16px);
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 14.5%;
+      max-width: 14.5%;
+      flex-direction: column;
+      // background-color: rgb(161, 161, 161);
+      
+    }
+    .position {
       font-size: clamp(12px, 1.3vw, 20px);
       display: flex;
       flex-wrap: wrap;
-      min-width: 13.5%;
-      max-width: 13.5%;
+      min-width: 25%;
+      max-width: 25%;
       flex-direction: column;
       // background-color: rgb(161, 161, 161);
       

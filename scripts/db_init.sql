@@ -22,7 +22,7 @@ CREATE TABLE posts (
   post_id SERIAL PRIMARY KEY,
   company VARCHAR NOT NULL,
   position VARCHAR NOT NULL,
-  date_apply DATE NOT NULL,
+  date_apply VARCHAR NOT NULL,
   status VARCHAR NOT NULL,
   salary INTEGER,
   contact VARCHAR, 

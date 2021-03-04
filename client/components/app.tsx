@@ -29,7 +29,7 @@ import CalendarHeatmap from 'reactjs-calendar-heatmap';
 // }
 
 const App = () => {
-    const [jobPosting, setJobPostings] = useState(DummyData)
+    const [jobPosting, setJobPostings] = useState([])
     const [isPopoverOpen, setPopover] = useState(false);
     const [modelState, setModelState] = useState();
 
@@ -39,53 +39,70 @@ const App = () => {
     const [newApplyDate, setNewApplyDate] = useState('');
     const [newStatus, setNewStatus] = useState('');
     const [newLink, setNewLink] = useState('');
-    const [newBaseSalary, setNewBaseSalary] = useState(0);
+    const [newContact, setNewContact] = useState('');
+    const [newReference, setNewReference] = useState('');
+    const [newNote, setNewNote] = useState('');
+    const [newBaseSalary, setNewBaseSalary] = useState();
 
     // ___________________________________________________
 
 
 
 
-  // useEffect( () => {
-  //   console.log('yooo')
-  //   fetch('/post/112471007958051224275/all')
-  //   .then(data => data.json())
-  //   .then(data => {
-  //     setJobPostings(data)
-  //   })
-  // },[])
+  useEffect( () => {
+    fetch('/post/101339886264631932984/all')
+    .then(data => data.json())
+    .then(data => {
+      console.log(data)
+      setJobPostings(data)
+    })
+  },[])
+
+
 
 
     const handleSubmit = () => {
       postSubmit()
 
       // Clears all input state _______________
-      const inputSetters = [setNewCompany, setNewPosition, setNewApplyDate, setNewStatus, setNewBaseSalary]
+      const inputSetters = [
+        setNewCompany, setNewPosition, setNewApplyDate, setNewStatus,
+        setNewBaseSalary, setNewNote, setNewReference, setNewContact, setNewLink
+        ]
+
+
       inputSetters.forEach(setter => setter(''))
     }
 
     const postSubmit = () => {
-       /*
-      Uncomment when we  have server set up.
+      const newPost = {}
+      
+      newPost.company = newCompany
+      newPost.position = newPosition
+      newPost.date = newApplyDate
+      newPost.status = newStatus
+      newPost.salary = newBaseSalary
+      newPost.contact = newContact
+      newPost.reference = newReference
+      newPost.link = newLink
+      newPost.notes = newNote
 
-      fetch('/addJob', {
+
+      fetch('/post/101339886264631932984', {
         method: 'POST',
         headers: {
           'Content-Type' : 'application/json',
         },
-        body: JSON.stringify({
-          newCompany,
-          newPosition,
-          newApplyDate,
-          newStatus,
-          newBaseSalary
-        }),
+        body: JSON.stringify(newPost),
       })
       .then(data => data.json())
-      .then(newEntry => {
-        const updatedPosting = [...jobPosting].push(newEntry);
+      .then(res => {
+        const oldData = jobPosting;
+        const newData = [...jobPosting];
+        newData.push(newPost)
+        console.log(newPost)
+        setJobPostings(newData)
       })
-      */
     }
 
     const handleChange = (e) => {
@@ -97,20 +114,22 @@ const App = () => {
           setNewPosition(e.target.value)
           break;
         case "Date":
-          setNewApplyDate(e.target.value)
+          setNewApplyDate((e.target.value).slice(0,9))
           break;
         case "Status":
           setNewStatus(e.target.value)
           break;
         case "Base Salary":
-          setNewBaseSalary(e.target.value)
+          setNewBaseSalary(e.target.value.toLocaleString())
           break;
-        case "PostingLink":
+        case "Contact":
+          setNewContact(e.target.value)
+          break;
+        case "Link":
           setNewLink(e.target.value)
-        case "Notes":
-          console.log(e.target.value)
-          setUpdatedNote(e.target.value)
-          setUpdatedNote(e.target.value)
+          break;
+        case "Note":
+          setNewNote(e.target.value)
           break;
       }
     }
@@ -148,14 +167,13 @@ const App = () => {
             jobID = {i}
             company = {opportunity.company}
             position = {opportunity.position}
-            date = {opportunity.date}
+            date = {opportunity.date_apply}
             status = {opportunity.status}
             salary = {opportunity.salary}
             contact = {opportunity.contact}
             reference = {opportunity.reference}
             link = {opportunity.link}
             notes = {opportunity.notes}
-            techStack = {opportunity.techStack}
             openModel = {openModel}
             />)
 })
@@ -182,12 +200,14 @@ const App = () => {
 
 
         <div className = "row-container">
+            <input className = "element" placeholder = "Note" onChange = {(e) => handleChange(e)} value = {newNote}></input>
             <input className = "element" placeholder = "Company" onChange = {(e) => handleChange(e)} value = {newCompany}></input>
             <input className = "element" placeholder = "Position" onChange = {(e) => handleChange(e)} value = {newPosition}></input>
-            <input className = "element" placeholder = "PostingLink" onChange = {(e) => handleChange(e)} value = {newLink}></input>
             <input className = "element" placeholder = "Date" onChange = {(e) => handleChange(e)} value = {newApplyDate}></input>
             <input className = "element" placeholder = "Status" onChange = {(e) => handleChange(e)} value = {newStatus}></input>
-            <input className = "element" placeholder = "Base Salary" onChange = {(e) => handleChange(e)} value = {newBaseSalary}></input>
+            <input className = "element" placeholder = "Salary" onChange = {(e) => handleChange(e)} value = {newBaseSalary}></input>
+            <input className = "element" placeholder = "Link" onChange = {(e) => handleChange(e)} value = {newLink}></input>
+            <input className = "element" placeholder = "Contact" onChange = {(e) => handleChange(e)} value = {newContact}></input>
             <button className = "element" onClick = {() => handleSubmit()}> Add Application </button>
             {table}
         </div>

@@ -34,13 +34,6 @@ const isLoggedIn = (req, res, next) => {
   }
 };
 
-// @ts-ignore
-app.get('/job', (req, res) => {
-  console.log('in /job/', req);
-  console.log('in job', res.locals);
-  res.status(200).send('/job');
-});
-
 // error handling
 // @ts-ignore
 app.use((err, req, res, next) => {

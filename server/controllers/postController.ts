@@ -7,7 +7,7 @@ postController.getUserPosts = (req: any, res: any, next: any) => {
   const { user_id } = req.params;
   const queryString = 'SELECT * FROM posts WHERE user_id = $1;';
   const values = [user_id];
-  // 112471007958051224275
+
   db.query(queryString, values)
     .then(({ rows }: any) => {
       console.log('rows from get all posts request', rows);

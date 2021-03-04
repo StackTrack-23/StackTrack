@@ -14,7 +14,7 @@ const ConverRateChart = () => {
             datasets: [
               {
               label: 'App #',
-              data: [30, 53, 54, 55, 35, 30],
+              data: [10, 15, 14, 15, 10, 5],
               backgroundColor: [
                 'rgba(255, 99, 233, .5)',
                 'rgba(54, 162, 235, .5)',
@@ -35,7 +35,7 @@ const ConverRateChart = () => {
             },
             {
               label: 'Convertion',
-              data: [10, 14, 17, 10, 14, 24],
+              data: [0, 3, 2, 5, 2, 0],
               backgroundColor: 'green',
               borderColor: 'blue'
             }
