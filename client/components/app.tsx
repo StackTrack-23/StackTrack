@@ -176,8 +176,9 @@ const App = () => {
               overview={'year'}
               handler={print}>
             </CalendarHeatmap>
+          </div>
+            
           <div><ConverRateChart/></div>
-        </div>
 
 
         <div className = "row-container">

@@ -25,18 +25,18 @@ const posts = [
   techStack: "Object"
   },
   {
-    company: 'Enigma',
-    position: 'Backend Dev',
-    date: '5/5/20',
-    status: 'Applied',
-    salary: '250,000',
-    contact: "Michael Ehrmantraut",
-    reference: "Jose Cruz",
-    link: 'https://Enigma.com/',
-    notes: 'Enigma emailed me back',
-    techStack: "Object"
-    },
-    {
+  company: 'Enigma',
+  position: 'Backend Dev',
+  date: '5/5/20',
+  status: 'Applied',
+  salary: '250,000',
+  contact: "Michael Ehrmantraut",
+  reference: "Jose Cruz",
+  link: 'https://Enigma.com/',
+  notes: 'Enigma emailed me back',
+  techStack: "Object"
+  },
+  {
   company: 'Uber',
   position: 'Backend Eng',
   date: '5/5/20',
@@ -46,20 +46,20 @@ const posts = [
   reference: "Jose Cruz",
   link: 'https://linkedin.com/',
   notes: 'Uber wants phonescreen',
-  techStack: "something else"
+  techStack: "Python, React, Node.js, Go, Redis,"
   },
   {
-    company: 'Amazon AWS',
-    position: 'Software Dev Lvl 2',
-    date: '5/5/20',
-    status: 'Applied',
-    salary: '250,000',
-    contact: "Sal Goodman",
-    reference: "Jose Cruz",
-    link: 'https://linkedin.com/',
-    notes: 'Amazon AWS was hard to get a hold of to double down',
-    techStack: "Object"
-    }
+  company: 'Amazon AWS',
+  position: 'Software Dev Lvl 2',
+  date: '5/5/20',
+  status: 'Applied',
+  salary: '250,000',
+  contact: "Sal Goodman",
+  reference: "Jose Cruz",
+  link: 'https://linkedin.com/',
+  notes: 'Amazon AWS was hard to get a hold of to double down',
+  techStack: "AWS, JAVA, "
+  }
 ]
 
 module.exports = posts; 
