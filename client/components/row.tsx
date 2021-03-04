@@ -21,4 +21,4 @@ const Row = ({company, position, status, date, salary, contact, reference, link,
 
 }
 
-export default Row; /*  */
+export default Row; 

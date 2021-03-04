@@ -1,16 +1,38 @@
 
 
 
-
+body{
+  background-color: black;
+}
 // .rows-container{
 
 //   width: 50%;
 //   border: 3px solid green;
 //   padding: 10px;
 
+  #appTitle {
+    font-size: clamp(22px, 2.3vw, 40px);
+    margin: auto;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    color: blanchedalmond;
+  }
 
+  .main-charts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  } 
+  .calendarHeatmap {
+    width: 133em;
+    overflow-x: auto;
+    white-space: nowrap;
+  } 
+
+  
   .row-container {
-    
+   
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
@@ -18,19 +40,31 @@
     align-items: center;
     min-width: 80%;
 
-
+    .elementfields{
+      // position: relative;
+      // margin-right: 12%;
+      // font-size: clamp(12px, 1.3vw, 20px);
+      // display: flex;
+      // flex-wrap: wrap;
+      // min-width: 11.5%;
+      // max-width: 11.5%;
+    }
 
     .elements {
       font-size: clamp(12px, 1.3vw, 20px);
       display: flex;
       flex-wrap: wrap;
-      min-width: 12.5%;
-      max-width: 12.5%;
+      min-width: 13.5%;
+      max-width: 13.5%;
       flex-direction: column;
+      // background-color: rgb(161, 161, 161);
+      
     }
-
+   
+  
   }
-
+  
+  
   .notes {
     display: flex;
     flex-wrap: wrap;
@@ -42,23 +76,19 @@
 
   
 // }
-
-
-
-
-  // div {
-  //   font-size: 1.3vw;
-  // }
-  // @media screen and (min-width: 1200px) {
-  //   div {
-  //      font-size: 15px;
-  //   }
-  // }
+//   div {
+//     font-size: 1.3vw;
+//   }
+//   @media screen and (min-width: 1200px) {
+//     div {
+//        font-size: 15px;
+//     }
+//   }
   
   
-  // @media screen and (max-width: 800px) {
-  //   div {
-  //      font-size: 15px;
-  //   }
-  // }
+//   @media screen and (max-width: 800px) {
+//     div {
+//        font-size: 15px;
+//     }
+//   }
   
