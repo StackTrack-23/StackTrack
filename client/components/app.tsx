@@ -46,13 +46,14 @@ const App = () => {
     const [note, setNote] = useState('');
 
 
-  // useEffect( () => {
-  //   fetch('/getPosts')
-  //   .then(data => data.json())
-  //   .then(data => {
-  //     setJobPostings(data)
-  //   })
-  // })
+  useEffect( () => {
+    console.log('yooo')
+    fetch('/job/112471007958051224275/all')
+    .then(data => data.json())
+    .then(data => {
+      setJobPostings(data)
+    })
+  },[])
 
 
     const handleSubmit = () => {
@@ -166,8 +167,7 @@ const App = () => {
       
       <Fragment>
         <h1 id="appTitle">StackTrack App</h1>
-        <div>tacos did i forget this already</div>
-        <a href="http://localhost:3000/auth/google">Sign In with Google</a>
+        <a href="/auth/google">Sign In with Google</a>
           <div className = "main-charts"> 
             <CalendarHeatmap
               className = "calendarHeatmap"
