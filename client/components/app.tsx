@@ -1,12 +1,12 @@
 import React, { useState, useEffect, Fragment } from 'react';
 
-import Row from './row'
-import DummyData from './dummyData'
-import applyData from './applyData'
+import Row from './row';
+import DummyData from './dummyData';
+import applyData from './applyData';
 import Popover from '@material-ui/core/Popover';
 import ConverRateChart from './converRateChart';
 import ProgressBar from './progressBar';
-import CalendarHeatmap from 'reactjs-calendar-heatmap'
+import CalendarHeatmap from 'reactjs-calendar-heatmap';
 
 
 

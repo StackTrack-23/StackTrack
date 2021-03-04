@@ -5,6 +5,7 @@ const {
   google: { clientSecret },
 } = require('../config/keys');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+// @ts-ignore
 const db = require('./models/dbModel');
 
 module.exports = (app: any) => {
