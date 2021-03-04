@@ -1,19 +1,39 @@
+// @ts-ignore
 const express = require('express');
-
 const router = express.Router();
-
+// @ts-ignore
 const postController = require('../controllers/postController.ts');
 
-/*
-GET '/job'
+router.get(
+  '/:user_id/all',
+  postController.getUserPosts,
+  (req: any, res: any) => {
+    return res.status(200).json(res.locals.posts);
+  }
+);
 
-POST '/job'
+router.post(
+  '/:user_id',
+  postController.createNewPost,
+  (req: any, res: any) => {
+    return res.sendStatus(201);
+  }
+);
 
-PUT '/job/:id'
+router.delete(
+  '/:user_id/:post_id',
+  postController.deletePost,
+  (req: any, res: any) => {
+    return res.sendStatus(204);
+  }
+);
 
-DELETE '/job/:id'
-*/
+router.put(
+  '/:user_id/:post_id',
+  postController.updatePost,
+  (req: any, res: any) => {
+    return res.sendStatus(200);
+  }
+);
 
-router.get('/post/:user_id/all', postController.getUserPosts, (req, res) => {
-  return res.status(200).json();
-});
+module.exports = router;

@@ -1,12 +1,8 @@
-// import express
 const express = require('express');
-// import path
 const path = require('path');
-// instantiate express app
 const app = express();
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-// assign port for server
 const port = process.env.PORT || 3000;
 
 const { query } = require('./models/dbModel.ts');
@@ -23,10 +19,10 @@ app.use(bodyParser.json());
 // serve build folder/statically serving client folder
 app.use(express.static(path.resolve(__dirname, '../dist/')));
 
-// // @ts-ignore
-// app.get('/', (req, res) => {
-//   res.sendStatus(200);
-// });
+const postRouter = require('./routers/postRouter.ts');
+
+// route
+app.use('/post', postRouter);
 
 // @ts-ignore
 const isLoggedIn = (req, res, next) => {
