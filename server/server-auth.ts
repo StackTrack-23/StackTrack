@@ -77,7 +77,7 @@ module.exports = (app: any) => {
     '/oAuth',
     passport.authenticate('google', {
       failureRedirect: '/',
-      successRedirect: '/job',
+      successRedirect: '/',
     })
   );
 

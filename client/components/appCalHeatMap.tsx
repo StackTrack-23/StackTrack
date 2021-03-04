@@ -10,11 +10,11 @@ const ConverRateChart = () => {
       <Bar
         data={
           {
-            labels: ['day 1', 'day 2', 'day 3', 'day 4', 'day 5', 'day 6'],
+            labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
             datasets: [
               {
               label: 'App #',
-              data: [50, 53, 54, 55, 35, 30],
+              data: [33, 53, 54, 55, 35, 30],
               backgroundColor: [
                 'rgba(255, 99, 233, .5)',
                 'rgba(54, 162, 235, .5)',

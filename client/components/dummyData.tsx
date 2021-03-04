@@ -28,7 +28,7 @@ const posts = [
   company: 'Enigma',
   position: 'Backend Dev',
   date: '5/5/20',
-  status: 'Applied',
+  status: 'Doubled Down',
   salary: '250,000',
   contact: "Michael Ehrmantraut",
   reference: "Jose Cruz",

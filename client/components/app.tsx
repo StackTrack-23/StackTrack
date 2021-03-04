@@ -42,18 +42,18 @@ const App = () => {
     const [newBaseSalary, setNewBaseSalary] = useState(0);
 
     // ___________________________________________________
-    const [currentIndex, setCurrentIndex] = useState();
-    const [note, setNote] = useState('');
 
 
-  useEffect( () => {
-    console.log('yooo')
-    fetch('/job/112471007958051224275/all')
-    .then(data => data.json())
-    .then(data => {
-      setJobPostings(data)
-    })
-  },[])
+
+
+  // useEffect( () => {
+  //   console.log('yooo')
+  //   fetch('/post/112471007958051224275/all')
+  //   .then(data => data.json())
+  //   .then(data => {
+  //     setJobPostings(data)
+  //   })
+  // },[])
 
 
     const handleSubmit = () => {
@@ -127,11 +127,11 @@ const App = () => {
            )
         });
 
-        setNote(jobPosting[index].notes)
+  
 
         const input = (
           <Fragment>
-              <textarea type = "text" rows="25" cols="100" placeholder = "Communication Log" value = {note} onChange={(e) => handleChange(e)}> </textarea>
+              <textarea type = "text" rows="25" cols="100" placeholder = "Communication Log" value = {jobPosting[index].notes} onChange={(e) => handleChange(e)}> </textarea>
           </Fragment>
           )
 
