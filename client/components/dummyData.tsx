@@ -153,6 +153,18 @@ const posts = [
   "notes": "company was hard to get a hold of to double down"
   }
   ,
+  {
+  "company": "Autodesk",
+  "position": "Software Eng",
+  "date": "2021-03-01",
+  "status": "applied",
+  "salary": 225000,
+  "contact": "Jenny",
+  "reference": "Chip",
+  "link": "autodesk.com",
+  "notes": "I love this comany"
+  }
+  ,
 ]
 
 module.exports = posts; 

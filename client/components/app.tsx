@@ -76,7 +76,6 @@ const App = () => {
 
     const postSubmit = () => {
       const newPost = {}
-      
       newPost.company = newCompany
       newPost.position = newPosition
       newPost.date = newApplyDate
@@ -100,7 +99,6 @@ const App = () => {
         const oldData = jobPosting;
         const newData = [...jobPosting];
         newData.push(newPost)
-        console.log(newPost)
         setJobPostings(newData)
       })
     }
@@ -119,8 +117,8 @@ const App = () => {
         case "Status":
           setNewStatus(e.target.value)
           break;
-        case "Base Salary":
-          setNewBaseSalary(e.target.value.toLocaleString())
+        case "Salary":
+          setNewBaseSalary(e.target.value)
           break;
         case "Contact":
           setNewContact(e.target.value)
@@ -137,7 +135,7 @@ const App = () => {
 
     const openModel = (index) => {
         const details = Object.values(jobPosting[index])
-        const cleanedDetailed = details.filter((_,i) => i !== 8)
+        const cleanedDetailed = details.filter((_,i) => i !== 3)
         const modelInfo = cleanedDetailed.map((el , i) => {
            return (
             <Fragment>
@@ -186,7 +184,9 @@ const App = () => {
       <Fragment>
         <h1 id="appTitle">StackTrack App</h1>
         <a href="/auth/google">Sign In with Google</a>
+
           <div className = "main-charts"> 
+
             <CalendarHeatmap
               className = "calendarHeatmap"
               data={applyData}
