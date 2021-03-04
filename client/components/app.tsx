@@ -166,6 +166,8 @@ const App = () => {
       
       <Fragment>
         <h1 id="appTitle">StackTrack App</h1>
+        <div>tacos did i forget this already</div>
+        <a href="http://localhost:3000/auth/google">Sign In with Google</a>
           <div className = "main-charts"> 
             <CalendarHeatmap
               className = "calendarHeatmap"
