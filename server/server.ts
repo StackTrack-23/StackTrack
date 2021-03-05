@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 
 const { query } = require('./models/dbModel.ts');
+const postRouter = require('./routers/postRouter.ts');
 
 require('./server-auth.ts')(app);
 
@@ -20,7 +21,6 @@ app.use(bodyParser.json());
 // serve build folder/statically serving client folder
 app.use(express.static(path.resolve(__dirname, '../dist/')));
 
-const postRouter = require('./routers/postRouter.ts');
 
 // route
 app.use('/post', postRouter);
@@ -33,6 +33,7 @@ const isLoggedIn = (req, res, next) => {
     res.sendStatus(401);
   }
 };
+
 
 // error handling
 // @ts-ignore

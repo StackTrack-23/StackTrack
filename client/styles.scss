@@ -25,11 +25,20 @@ body{
     flex-direction: row;
   } 
   .calendarHeatmap {
-    width: 133em;
+    width: 80%;
     overflow-x: auto;
     white-space: nowrap;
   } 
+  .svg {
+    width: 1500px;
+    // overflow-x: auto;
+    // white-space: nowrap;
+  } 
+  
+  .converRateChart{
+    max-width: 90%;
 
+  }
   
   .row-container {
    
@@ -43,7 +52,7 @@ body{
     .elementfields{
       // position: relative;
       // margin-right: 12%;
-      // font-size: clamp(12px, 1.3vw, 20px);
+      font-size: clamp(12px, 1.3vw, 20px);
       // display: flex;
       // flex-wrap: wrap;
       // min-width: 11.5%;
@@ -70,7 +79,14 @@ body{
       // background-color: rgb(161, 161, 161);
       
     }
-   
+    .noteBox {
+      background-color: rgba(53, 52, 52, 0.1);
+      min-width: 12.5%;
+      text-align: left;
+      flex-wrap: wrap;
+      margin: 10px;
+      color: rgb(182, 182, 182);
+    }
   
   }
   

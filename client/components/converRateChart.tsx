@@ -16,12 +16,12 @@ const ConverRateChart = () => {
               label: 'App #',
               data: [10, 15, 14, 15, 10, 5],
               backgroundColor: [
-                'rgba(255, 99, 233, .5)',
-                'rgba(54, 162, 235, .5)',
-                'rgba(255, 206, 86, .5)',
-                'rgba(75, 192, 192, .5)',
-                'rgba(153, 102, 255, .5)',
-                'rgba(255, 159, 64, .5)',
+                'rgba(255, 99, 233, .3)',
+                'rgba(54, 162, 235, .3)',
+                'rgba(255, 206, 86, .3)',
+                'rgba(75, 192, 192, .3)',
+                'rgba(153, 102, 255, .3)',
+                'rgba(255, 159, 64, .3)',
               ],
               borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -35,7 +35,7 @@ const ConverRateChart = () => {
             },
             {
               label: 'Convertion',
-              data: [0, 3, 2, 5, 2, 0],
+              data: [1, 3, 4, 5, 2, 1],
               backgroundColor: 'green',
               borderColor: 'blue'
             }

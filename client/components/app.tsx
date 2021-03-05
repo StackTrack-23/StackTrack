@@ -9,25 +9,6 @@ import ProgressBar from './progressBar';
 import CalendarHeatmap from 'reactjs-calendar-heatmap';
 
 
-
-// declare global {
-//     namespace JSX {
-//     interface Intrinsicpostfield {
-//         // button: any;
-//         // img: any;
-//         input: any;
-//         div: any;
-//         h1: any;
-//         h3: any;
-//         p: any;
-//         span: any;
-//         form: any;
-//         label: any;
-//         a: any;
-// }
-//   }
-// }
-
 const App = () => {
     const [jobPosting, setJobPostings] = useState([])
     const [isPopoverOpen, setPopover] = useState(false);
@@ -143,8 +124,6 @@ const App = () => {
            </Fragment>
            )
         });
-
-  
 
         const input = (
           <Fragment>
