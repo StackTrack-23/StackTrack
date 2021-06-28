@@ -1,6 +1,120 @@
-html {
-    background: rgb(82, 140, 187);
-    div {
-      color: red;
-    }
+
+
+
+body{
+  background-color: black;
 }
+// .rows-container{
+
+//   width: 50%;
+//   border: 3px solid green;
+//   padding: 10px;
+
+  #appTitle {
+    font-size: clamp(22px, 2.3vw, 40px);
+    margin: auto;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    color: blanchedalmond;
+  }
+
+  .main-charts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  } 
+  .calendarHeatmap {
+    width: 80%;
+    overflow-x: auto;
+    white-space: nowrap;
+  } 
+  .svg {
+    width: 1500px;
+    // overflow-x: auto;
+    // white-space: nowrap;
+  } 
+  
+  .converRateChart{
+    max-width: 90%;
+
+  }
+  
+  .row-container {
+   
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    min-width: 80%;
+
+    .elementfields{
+      // position: relative;
+      // margin-right: 12%;
+      font-size: clamp(12px, 1.3vw, 20px);
+      // display: flex;
+      // flex-wrap: wrap;
+      // min-width: 11.5%;
+      // max-width: 11.5%;
+    }
+
+    .elements {
+      font-size: clamp(12px, 1.3vw, 16px);
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 14.5%;
+      max-width: 14.5%;
+      flex-direction: column;
+      // background-color: rgb(161, 161, 161);
+      
+    }
+    .position {
+      font-size: clamp(12px, 1.3vw, 20px);
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 25%;
+      max-width: 25%;
+      flex-direction: column;
+      // background-color: rgb(161, 161, 161);
+      
+    }
+    .noteBox {
+      background-color: rgba(53, 52, 52, 0.1);
+      min-width: 12.5%;
+      text-align: left;
+      flex-wrap: wrap;
+      margin: 10px;
+      color: rgb(182, 182, 182);
+    }
+  
+  }
+  
+  
+  .notes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px;
+    min-width: 80%;
+    background-color: rgb(206, 206, 206);
+  }
+
+  
+// }
+//   div {
+//     font-size: 1.3vw;
+//   }
+//   @media screen and (min-width: 1200px) {
+//     div {
+//        font-size: 15px;
+//     }
+//   }
+  
+  
+//   @media screen and (max-width: 800px) {
+//     div {
+//        font-size: 15px;
+//     }
+//   }
+  

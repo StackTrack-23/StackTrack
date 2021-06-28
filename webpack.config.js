@@ -46,11 +46,13 @@ module.exports = {
     publicPath: '/',
     contentBase: path.resolve(__dirname, 'dist'),
     proxy: {
-      '/': 'http://localhost:3000',
-      '/auth': {
+      '/oAuth': {
         target: 'http://localhost:3000',
         secure: false,
         changeorigin: true,
+      },
+      '/': {
+        target: 'http://localhost:3000',
       },
     },
     watchOptions: {
@@ -59,3 +61,4 @@ module.exports = {
     },
   },
 };
+                 
